@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +16,7 @@
       <h2>Register</h2>
     </div>
     <form action="registration.php" method="post">
+      <?php include('errors.php') ?>
       <div>
         <label for="username">Username : </label>
         <input type="text" name="username" required>
@@ -31,7 +33,7 @@
         <label for="password_2">Confirm Password : </label>
         <input type="password" name="password_2" required>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" name="registration_btn">Submit</button>
 
       <p>Already a user? <a href="login.php"><strong>Log in</strong></a></p>
     </form>
